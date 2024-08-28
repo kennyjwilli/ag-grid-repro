@@ -1,0 +1,38 @@
+# Package manager files
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+shrinkwrap.json
+
+# Build outputs
+dist
+
+# Prettier reformats code blocks inside Markdown, which affects rendered output
+*.md
+
+# Prettier ignore files
+.prettierignore
+
+# Dependencies
+node_modules/
+
+# Compiled output
+/dist/
+/tmp/
+/out-tsc/
+.cache-loader/
+/docs/build/
+.next/
+
+# Test results
+/coverage/
+
+# Tiltfiles
+Tiltfile
+
+/.nx/cache
+
+
+
+/.nx/workspace-data
+migrations.json

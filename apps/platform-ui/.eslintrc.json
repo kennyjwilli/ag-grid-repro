@@ -1,0 +1,23 @@
+{
+  "extends": ["../../.eslintrc.ui.json"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": ["warn"]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
+  "globals": {
+    "React": true,
+    "jsdom": true,
+    "JSX": true,
+    "fetch": true
+  }
+}

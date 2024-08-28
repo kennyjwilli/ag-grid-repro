@@ -1,0 +1,22 @@
+{
+  "extends": [
+    ".eslintrc.json",
+    "plugin:@nx/react-typescript",
+    "next",
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@next/next/no-html-link-for-pages": "error",
+        "filenames-simple/naming-convention": "off"
+      }
+    }
+  ]
+}

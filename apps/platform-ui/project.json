@@ -1,0 +1,42 @@
+{
+  "name": "platform-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/platform-ui",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "platform-ui:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "platform-ui:build:development",
+          "port": 4200
+        },
+        "production": {
+          "buildTarget": "platform-ui:build:production"
+        }
+      }
+    },
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/platform-ui",
+        "outputPath": "apps/platform-ui/.next",
+        "postcssConfig": "apps/platform-ui/postcss.config.js",
+        "debug": true
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/platform-ui"
+        },
+        "production": {}
+      }
+    }
+  }
+}

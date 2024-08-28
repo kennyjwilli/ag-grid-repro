@@ -1,0 +1,9 @@
+{
+  "name": "@deeporigin/platform-ui",
+  "version": "27.256.1",
+  "private": "true",
+  "type": "module",
+  "devDependencies": {
+    "prebuild-install": "^7.1.2"
+  }
+}
