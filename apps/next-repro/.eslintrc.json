@@ -1,5 +1,5 @@
 {
-  "extends": [
+  "extends":  [
     ".eslintrc.json",
     "plugin:@nx/react-typescript",
     "next",
@@ -12,11 +12,24 @@
   },
   "overrides": [
     {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    },
+    {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
         "@next/next/no-html-link-for-pages": "error",
         "filenames-simple/naming-convention": "off"
       }
     }
-  ]
+
+  ],
+  "globals": {
+    "React": true,
+    "jsdom": true,
+    "JSX": true,
+    "fetch": true
+  }
 }

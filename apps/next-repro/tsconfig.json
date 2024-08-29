@@ -1,5 +1,4 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
@@ -25,7 +24,12 @@
     ],
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
   },
   "include": [
     "**/*.ts",
