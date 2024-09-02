@@ -7,7 +7,6 @@ import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-mod
 import { ModuleRegistry } from '@ag-grid-community/core';
 import { AgGridReact } from '@ag-grid-community/react';
 import { LicenseManager } from '@ag-grid-enterprise/core';
-import { Avatar } from 'antd';
 import _ from 'lodash';
 import React from 'react';
 
@@ -17,24 +16,19 @@ LicenseManager.setLicenseKey(
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
-interface UserProps {
-  name: string;
-  avatarUrl?: string;
-}
-
-const User = (props: UserProps) => {
-  const { avatarUrl, name } = props;
-  return <Avatar src={avatarUrl} alt={name} />;
-};
-
 const CellRenderer = () => {
+
+  const [a, setA] = React.useState<string>();
+  const [b, setB] = React.useState<string>();
+  React.useEffect(() => {
+    setA('a');
+    setB('b');
+  }, []);
   return (
-    <User
-      name={'kwilliams@deeporigin.com'}
-      avatarUrl={
-        'https://lh3.googleusercontent.com/a/ACg8ocKXw9GJsgMMlYxqz9qUKKqYTCRNXwP35pdRZeMAb_FxkbEYGcU=s96-c'
-      }
-    />
+    <div>
+      {a}
+      {b}
+    </div>
   );
 };
 
