@@ -17,6 +17,9 @@ dependencies:
   '@ag-grid-community/styles':
     specifier: 32.1.0
     version: 32.1.0
+  '@ag-grid-enterprise/column-tool-panel':
+    specifier: 32.1.0
+    version: 32.1.0
   '@ag-grid-enterprise/core':
     specifier: 32.1.0
     version: 32.1.0
@@ -83,10 +86,33 @@ packages:
     resolution: {integrity: sha512-OjakLetS/zr0g5mJWpnjldk/RjGnl7Rv3I/5cGuvtgdmSgS+4FNZMr8ZmyR8Bl34s0RM63OSIphpVaFGlnJM4w==}
     dev: false
 
+  /@ag-grid-enterprise/column-tool-panel@32.1.0:
+    resolution: {integrity: sha512-OFgNKryVPV18HZtMRME5BfMvgP+4QbN/oqV8V+1tUU0DyZdAEwrr9HlZorpC5vOKnnzB7MEF7KmTl7rTOfM+hA==}
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      '@ag-grid-enterprise/core': 32.1.0
+      '@ag-grid-enterprise/row-grouping': 32.1.0
+      '@ag-grid-enterprise/side-bar': 32.1.0
+    dev: false
+
   /@ag-grid-enterprise/core@32.1.0:
     resolution: {integrity: sha512-zUujEzdCOloJiMMZTzLM22N+P1m2h+Fa/5vNdHjXMehkJaUIZrLv63Wl0zt2pjtu1E8XbXKdEeczPQv3xkUu0A==}
     dependencies:
       '@ag-grid-community/core': 32.1.0
+    dev: false
+
+  /@ag-grid-enterprise/row-grouping@32.1.0:
+    resolution: {integrity: sha512-ij6C2FRf+sTwBRnn23yoTzI4IsCgdT9F6BTMc47F9uH7Zc9F8Qaidy2bUjBFTMcUODpfDhjZObkfCVuLhK/6Kw==}
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      '@ag-grid-enterprise/core': 32.1.0
+    dev: false
+
+  /@ag-grid-enterprise/side-bar@32.1.0:
+    resolution: {integrity: sha512-bJgPCbW0BXAFjAGKwPDj5aDQpZSBS7IMCJ4AltCI0Ng4CyUx7mRWK6ShM58Y9lfDk9JskLOlahKu05bx6iNPoQ==}
+    dependencies:
+      '@ag-grid-community/core': 32.1.0
+      '@ag-grid-enterprise/core': 32.1.0
     dev: false
 
   /@ant-design/colors@7.1.0:
