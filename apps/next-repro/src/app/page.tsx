@@ -40,14 +40,16 @@ const CellRenderer = (props: CustomCellRendererProps) => {
     setB('b');
   }, []);
   return (
-    <AsyncRenderer>
-      <div>
-        {data?.index}
-        {a}
-        {b}
-      </div>
-    </AsyncRenderer>
+    <div>
+      {data?.index}
+      {a}
+      {b}
+    </div>
   );
+};
+
+const AsyncRendererCellWrapper = (props: any) => {
+  return <AsyncRenderer><CellRenderer {...props} /></AsyncRenderer>;
 };
 
 const RootContainer = () => {
@@ -60,7 +62,8 @@ const RootContainer = () => {
   const columnDefs = _.range(0, 12).map((i) => ({
     headerName: `text${i}`,
     colId: `text${i}`,
-    cellRenderer: CellRenderer,
+    // cellRenderer: CellRenderer,
+    cellRenderer: AsyncRendererCellWrapper,
   }));
 
   return (
